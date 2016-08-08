@@ -33,6 +33,23 @@ app.get('/post', function(req, res){
 	res.render('postform');
 });
 
+app.post('/create', function(req, res){
+
+	var post = new Post({
+		title: req.body.title,
+		content: req.body.content
+	});
+	console.log(post);
+	post.save(function(err, model){
+		if (err) {
+			res.send(500, 'Sorry we could not save your post');
+		} else {
+			res.redirect('/');
+
+		}
+	})
+});
+
 
 
 app.listen(port);

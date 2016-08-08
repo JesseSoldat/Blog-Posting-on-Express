@@ -9,6 +9,27 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<a class="brand" href="/">My Blog</a>
+				<ul class="nav">
+					<li><a href="/">All Posts</a></li>
+					<li class="active"><a href="/post">Create a Post</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<form action="/create" method="POST">
+					<label>Post Title
+					</label>
+					<input type="text" name="title" placeholder="Your title goes here..." style="margin-left:40px;">
+					<br/>
+					<br/>
+					<label>Post Content
+				
+					</label>
+					<textarea type="text" name="content"  style="margin-left:40px;"></textarea>
+					<p>
+						<button type="submit" class="btn">Submit</button> 
+				</form>
 			</div>
 		</div>
 	</div>
